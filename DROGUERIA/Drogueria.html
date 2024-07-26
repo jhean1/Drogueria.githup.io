@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Droguería y variedades los 3 hermanos</title>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+  <div class="flex flex-col min-h-screen">
+    <header class="bg-primary text-primary-foreground py-4 shadow-md">
+      <div class="container mx-auto flex items-center justify-between px-4 md:px-6">
+        <a href="#" class="flex items-center gap-2">
+          <img src="/placeholder.svg" alt="Droguería Logo" width="40" height="40" class="w-8 h-8">
+          <span class="text-lg font-bold">Droguería</span>
+        </a>
+        <nav class="hidden md:flex items-center gap-4">
+          <a href="variedades.html" class="text-sm font-medium hover:text-primary-foreground/80">Variedades</a>
+          <a href="servicios.html" class="text-sm font-medium hover:text-primary-foreground/80">Servicios</a>
+          <a href="#" class="text-sm font-medium hover:text-primary-foreground/80">Sobre Nosotros</a>
+          <a href="contacto-drogueria.html" class="text-sm font-medium hover:text-primary-foreground/80">Contacto</a>
+        </nav>
+        <button class="md:hidden btn-outline">
+          <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="4" x2="20" y1="12" y2="12" />
+            <line x1="4" x2="20" y1="6" y2="6" />
+            <line x1="4" x2="20" y1="18" y2="18" />
+          </svg>
+          <span class="sr-only">Abrir menú</span>
+        </button>
+      </div>
+    </header>
+    <main class="flex-1 container mx-auto px-4 md:px-6 py-12 md:py-20">
+      <div class="grid md:grid-cols-2 gap-8 items-center">
+        <div class="space-y-4 animate-fade-in-up">
+          <h1 class="text-3xl md:text-4xl font-bold"><b><font color="black">Bienvenido a Droguería y variedades los 3 hermanos</h1></b></font>
+          <p class="text-muted-foreground"><b><font color="black">Descubre nuestra amplia selección de variedades de productos de calidad para tu salud y bienestar.</b></font>
+          </p>
+          <div class="flex gap-4">
+            <a href="explorador-drogueria.html"><button class="btn-primary">Explorar Drogueria</button></a>
+            <a href="contacto-drogueria.html"><button class="btn-outline">Contactar</button></a>
+          </div>
+        </div>
+        <div class="relative animate-fade-in-up">
+          <img src="Logo.jpg" alt="Productos de Droguería" width="600" height="400" class="w-full h-auto rounded-lg shadow-lg">
+          <div class="absolute inset-0 bg-gradient-to-t from-background to-transparent rounded-lg"></div>
+        </div>
+      </div>
+    </main>
+    <footer class="bg-muted text-muted-foreground py-6 shadow-t">
+      <div class="container mx-auto flex items-center justify-between px-4 md:px-6">
+        <p class="text-sm">&copy; <b><font color="black">2024 Droguería y variedades los tres hermanos. Todos los derechos reservados.</font></b></p>
+        <nav class="flex items-center gap-4">
+          <a href="#" class="text-sm hover:text-muted-foreground/80"><b><font color="black">Términos de Servicio</font></b></a>
+          <a href="#" class="text-sm hover:text-muted-foreground/80"><b><font color="black">Política de Privacidad</font></b></a>
+        </nav>
+      </div>
+    </footer>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

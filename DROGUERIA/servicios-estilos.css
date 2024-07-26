@@ -1,0 +1,178 @@
+:root {
+  --background: hsl(0, 0%, 10%); /* Negro neón */
+  --foreground: hsl(0, 0%, 100%); /* Blanco */
+  --card: hsla(0, 0%, 20%, 0.5); /* Fondo semitransparente */
+  --card-foreground: hsl(0, 0%, 100%); /* Blanco para el texto de la tarjeta */
+  --primary: hsl(0, 100%, 50%); /* Rojo neón */
+  --primary-foreground: hsl(0, 0%, 100%); /* Blanco para el texto sobre rojo neón */
+  --secondary: hsl(0, 100%, 50%); /* Rojo neón */
+  --secondary-foreground: hsl(0, 0%, 100%); /* Blanco para el texto sobre rojo neón */
+  --muted: hsla(0, 8%, 7%, 0.3); /* Gris oscuro (ajustado) */
+  --muted-foreground: hsl(0, 11%, 7%); /* Gris claro */
+  --border: hsl(0, 100%, 40%); /* Rojo neón oscuro */
+  --input: hsl(0, 100%, 40%); /* Rojo neón oscuro */
+  --radius: 0.5rem;
+  --header-radius: 1rem; /* Radio para el encabezado */
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.page-container {
+  flex: 1;
+  background-image: url(imagen3.jfif); /* Reemplaza con la ruta a tu imagen de fondo */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.header {
+  background-color: var(--primary);
+  color: var(--primary-foreground);
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid var(--secondary);
+  border-radius: var(--header-radius);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin: 0;
+  position: sticky; /* Asegura que el encabezado se mantenga fijo */
+  top: 0;
+  z-index: 1000;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--background); /* Negro neón */
+}
+
+.nav {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-link {
+  font-size: 1rem;
+  font-weight: 700; /* Negrita para los enlaces de navegación */
+  color: var(--background); /* Negro neón */
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.nav-link:hover {
+  color: var(--primary-foreground); /* Blanco para el texto al pasar el cursor */
+  text-decoration: underline;
+}
+
+.nav-link.active {
+  border-bottom: 2px solid var(--primary-foreground);
+}
+
+.main-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.product-card {
+  background-color: var(--card);
+  color: var(--card-foreground);
+  border-radius: var(--radius);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  animation: slide-in 0.5s ease-in-out;
+}
+
+.image-container {
+  position: relative;
+  height: 12rem;
+  overflow: hidden;
+}
+
+.product-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.product-title {
+  color: var(--primary-foreground);
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.card-content {
+  padding: 1.5rem;
+}
+
+.card-description {
+  color: var(--muted-foreground);
+}
+
+.card-button {
+  background-color: var(--primary);
+  color: var(--primary-foreground);
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: var(--radius);
+  cursor: pointer;
+  font-family: 'Inter', sans-serif;
+  font-weight: 700; /* Negrita para el botón */
+}
+
+/* Animations */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slide-in {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.5s ease-in-out;
+}
+
+.animate-slide-in {
+  animation: slide-in 0.5s ease-in-out;
+}

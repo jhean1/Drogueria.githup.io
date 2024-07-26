@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explorar Droguería</title>
+    <link rel="stylesheet" href="explorador.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="header-content">
+                <h1>Explorar Droguería</h1>
+                <div class="search-container">
+                    <input type="text" placeholder="Buscar medicamentos..." id="search-input">
+                </div>
+            </div>
+        </header>
+        <main class="main-content">
+            <div class="filter-section">
+                <h2>Medicamentos</h2>
+                <button id="filter-btn">Filtros</button>
+                <div id="dropdown-menu" class="dropdown-menu hidden">
+                    <div class="dropdown-content">
+                        <label>Filtrar por</label>
+                        <div class="separator"></div>
+                        <div class="radio-group">
+                            <input type="radio" id="all-categories" name="category" value="all" checked>
+                            <label for="all-categories">Todos</label>
+                            <input type="radio" id="analgesicos" name="category" value="analgesicos">
+                            <label for="analgesicos">Analgésicos</label>
+                            <input type="radio" id="antiinflamatorios" name="category" value="antiinflamatorios">
+                            <label for="antiinflamatorios">Antiinflamatorios</label>
+                            <input type="radio" id="antibioticos" name="category" value="antibioticos">
+                            <label for="antibioticos">Antibióticos</label>
+                            <input type="radio" id="antiacidos" name="category" value="antiacidos">
+                            <label for="antiacidos">Antiácidos</label>
+                            <input type="radio" id="antihistaminicos" name="category" value="antihistaminicos">
+                            <label for="antihistaminicos">Antihistamínicos</label>
+                        </div>
+                        <div class="separator"></div>
+                        <div class="radio-group">
+                            <input type="radio" id="all-prices" name="price" value="all" checked>
+                            <label for="all-prices">Todos los precios</label>
+                            <input type="radio" id="low-price" name="price" value="low">
+                            <label for="low-price">Bajo ($0-$30.000)</label>
+                            <input type="radio" id="high-price" name="price" value="high">
+                            <label for="high-price">Alto ($30.000+)</label>
+                        </div>
+                        <div class="separator"></div>
+                        <div class="radio-group">
+                            <input type="radio" id="all-ratings" name="rating" value="all" checked>
+                            <label for="all-ratings">Todas las calificaciones</label>
+                            <input type="radio" id="rating-4" name="rating" value="4">
+                            <label for="rating-4">4 estrellas o más</label>
+                            <input type="radio" id="rating-4.5" name="rating" value="4.5">
+                            <label for="rating-4.5">4.5 estrellas o más</label>
+                            <input type="radio" id="rating-5" name="rating" value="5">
+                            <label for="rating-5">5 estrellas</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="medications-list" class="medications-list"></div>
+        </main>
+        <footer class="footer">
+            <button id="cart-btn">Carrito (0)</button>
+            <div id="cart-menu" class="cart-menu hidden">
+                <div class="cart-content">
+                    <label>Tu carrito</label>
+                    <div class="separator"></div>
+                    <div id="cart-items" class="cart-items">Tu carrito está vacío</div>
+                    <div class="separator"></div>
+                    <div class="total-section">
+                        <span>Total:</span>
+                        <span id="total-price">$0.00</span>
+                    </div>
+                    <div class="separator"></div>
+                    <button id="go-to-cart">Ir al Carrito</button>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="explorador.js"></script>
+</body>
+</html>

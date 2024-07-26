@@ -1,0 +1,111 @@
+body {
+  font-family: 'Arial', sans-serif;
+  background: url(descarga1.jfif) no-repeat center center fixed; 
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  color: white;
+}
+
+.contact-container {
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  width: 100%;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.header h2 {
+  margin-bottom: 0.5rem;
+  font-size: 1.75rem;
+  color: #ff073a; /* Neon Red */
+}
+
+.header p {
+  color: #ffffff; /* Bright White */
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+.contact-details .contact-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.contact-details .contact-item .icon {
+  width: 24px;
+  height: 24px;
+  color: #ff073a; /* Neon Red */
+}
+
+.contact-details .contact-item .contact-text {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #ffffff; /* Bright White */
+}
+
+.contact-actions .btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.contact-actions .btn .btn-icon {
+  margin-right: 0.5rem;
+  width: 20px;
+  height: 20px;
+}
+
+.contact-actions .btn
+.contact-actions .btn.primary {
+  background-color: #ff073a; /* Neon Red */
+  color: white;
+  border: none;
+}
+
+.contact-actions .btn.primary:hover {
+  background-color: #e60029; /* Slightly darker red */
+}
+
+.contact-actions .btn.secondary {
+  background-color: #ffffff; /* White */
+  color: #ff073a; /* Neon Red */
+  border: 1px solid #ff073a; /* Neon Red */
+}
+
+.contact-actions .btn.secondary:hover {
+  background-color: #ff073a; /* Neon Red */
+  color: white;
+}
+
+.contact-actions .btn.outline {
+  background-color: transparent;
+  color: #ff073a; /* Neon Red */
+  border: 1px solid #ff073a; /* Neon Red */
+}
+
+.contact-actions .btn.outline:hover {
+  background-color: #ff073a; /* Neon Red */
+  color: white;
+}
