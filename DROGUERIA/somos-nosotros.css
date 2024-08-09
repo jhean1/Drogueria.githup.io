@@ -1,0 +1,192 @@
+/* Estilos globales */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    /* Imagen de fondo */
+    background: url('imagen2.jfif') no-repeat center center fixed; 
+    background-size: cover;
+    color: white;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    animation: fadeIn 1s ease-in;
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    justify-content: space-between;
+}
+
+/* Encabezado */
+.header {
+    background-color: rgba(255, 0, 0, 0.8); /* Fondo rojo neón semitransparente */
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    animation: slideDown 0.5s ease-in-out;
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.header .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: white;
+    text-decoration: none;
+}
+
+.header .title {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.header .navigation {
+    display: none;
+}
+
+.header .navigation a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+.header .menu-button {
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+/* Menú desplegable */
+.navigation-visible {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    animation: slideUp 0.5s ease-in-out;
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@media (min-width: 768px) {
+    .header .navigation {
+        display: flex;
+    }
+
+    .header .menu-button {
+        display: none;
+    }
+}
+
+/* Sección principal */
+.content {
+    padding: 40px 20px;
+    background: rgba(0, 0, 0, 0.5); /* Fondo negro semitransparente */
+    animation: fadeIn 1s ease-in;
+}
+
+.mission-vision {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.mission-vision h2 {
+    color: #ff0000;
+    font-size: 2em;
+    margin-bottom: 10px;
+    animation: fadeIn 1s ease-in;
+}
+
+.mission-vision p {
+    font-size: 1.2em;
+    line-height: 1.5em;
+    color: #000000; /* Texto negro */
+    font-weight: bold; /* Negrita */
+    animation: fadeIn 1s ease-in;
+}
+
+/* Estilos para la sección de Valores */
+.mission-vision ol {
+    margin: 0;
+    padding: 0;
+    list-style-position: inside; /* Muestra los números dentro del contenedor */
+    color: #000000; /* Texto negro */
+    font-weight: bold; /* Negrita */
+}
+
+.mission-vision ol li {
+    margin-bottom: 10px;
+    font-size: 1.2em;
+}
+
+/* Pie de página */
+.footer {
+    background-color: rgba(255, 0, 0, 0.8); /* Fondo rojo neón semitransparente */
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    animation: slideUp 0.5s ease-in-out;
+}
+
+.footer p {
+    margin: 0;
+}
+
+.footer .social-media {
+    display: flex;
+    gap: 20px;
+}
+
+.footer .social-link {
+    color: white;
+    text-decoration: none;
+}
+
+/* Estilos responsivos */
+@media (min-width: 768px) {
+    .mission-vision {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .mission-vision div {
+        width: 48%;
+    }
+}
